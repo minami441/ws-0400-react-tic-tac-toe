@@ -1,101 +1,70 @@
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# React基礎 コンポーネントの実装
+## Available Scripts
 
-JavaScriptで実装した○×ゲームと同様のゲームをReactで実装してください。
+In the project directory, you can run:
 
-demo: https://version1-workspace.github.io/ws-0400-react-tic-tac-toe/
+### `yarn start`
 
-## 課題で身に着けること
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- ライフサイクルメソッド
-- propsとは？
-- stateとは？
-- children, fragment
-- クラスコンポーネントと関数コンポーネント
-- コンポーネントを作る時に考えること
-- yarnモジュールのインストール（styled-components)
-- CSS in JS(Styled-Component)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 課題の進め方
+### `yarn test`
 
-#### 0. 課題用リポジトリの作成
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-フォークでなく個人のアカウントにリポジトリ を作成してください。
+### `yarn build`
 
-#### 1. yarn, create-react-appを利用してReactをインストール
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. reactをインストール
-```
-yarn create react-app .
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2. reactを動かしてみる
-```
-yarn start
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-ブラウザが起動してReactのロゴが表示されれば完了です。
+### `yarn eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-#### 2. Reactの公式ドキュメントを読む
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-主にメインコンセプト部分中心に
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- [React.js公式](https://ja.reactjs.org/docs/hello-world.html)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### 参考リンク
-- [JavaScriptでイミュータブルなプログラミングをする](https://sbfl.net/blog/2018/09/25/javascript-immutable-programming/)
-- [ES2015のモジュール機能(import/export)](https://qiita.com/ozaki25/items/9723cb3c1c72845157d5)
-- [これから始めるReact.js入門](https://speakerdeck.com/jjoo/korekarashi-merureact-dot-jsru-men)
-- [Reactのライフサイクルメソッドのコード例](https://codesandbox.io/s/react-lifecycle-sample-w6n87?file=/src/App.js)
+## Learn More
 
-jsFiddleのようなブラウザで動作を確認できるものを使いながら読むと理解が深まるかと思います。
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-[jsFiddle](https://jsfiddle.net/boilerplate/react-jsx)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-#### 3. ○×ゲームを実装
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-[js課題](https://github.com/version-1/js-tic-tac-toe)で実装した○×ゲームと同様のものを実装して、
-JavaScriptでの実装とReactでの実装の違いを学ぶ。
+### Analyzing the Bundle Size
 
-##### styled-component をインストールしてstyled-componentを使ってスタイルする
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-下記手順を参考にstyled-componentをインストールして使用する。
+### Making a Progressive Web App
 
-[styled-components install](https://styled-components.com/docs/basics#installation)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-##### 開発はdevelopブランチを使って行い、実装が完了した後はmasterへのプルリクエストを作成する。
+### Advanced Configuration
 
-サイトを公開する際はdevelopブランチで下記サイト公開の手順を実施してください。
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-#### 4. サイトとして公開
+### Deployment
 
-1. gh-pagesモジュールを追加
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-```
-$ yarn add -D gh-pages
-```
+### `yarn build` fails to minify
 
-2. package.jsonのscriptsに下記コマンドを追加
-
-```
-"predeploy": "yarn run build"
-"deploy": "gh-pages -d build"
-```
-
-3. package.jsonにhompepage urlを追加
-```
-// https://[アカウント名].github.io/[リポジトリ名]
-ex)
-  "homepage": "https://version-1.github.io/react-tic-tac-toe"
-```
-
-4. 上記変更をコミット & Push
-
-5. コマンドを実行
-
-```
-$ yarn run deploy
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
