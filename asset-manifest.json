@@ -1,19 +1,16 @@
 {
   "files": {
-    "main.js": "/ws-0400-react-tic-tac-toe/static/js/main.279011d9.chunk.js",
-    "main.js.map": "/ws-0400-react-tic-tac-toe/static/js/main.279011d9.chunk.js.map",
-    "runtime-main.js": "/ws-0400-react-tic-tac-toe/static/js/runtime-main.56344721.js",
-    "runtime-main.js.map": "/ws-0400-react-tic-tac-toe/static/js/runtime-main.56344721.js.map",
-    "static/js/2.30e64126.chunk.js": "/ws-0400-react-tic-tac-toe/static/js/2.30e64126.chunk.js",
-    "static/js/2.30e64126.chunk.js.map": "/ws-0400-react-tic-tac-toe/static/js/2.30e64126.chunk.js.map",
-    "index.html": "/ws-0400-react-tic-tac-toe/index.html",
-    "precache-manifest.159e075150726a49fb5702df5b3dd777.js": "/ws-0400-react-tic-tac-toe/precache-manifest.159e075150726a49fb5702df5b3dd777.js",
-    "service-worker.js": "/ws-0400-react-tic-tac-toe/service-worker.js",
-    "static/js/2.30e64126.chunk.js.LICENSE.txt": "/ws-0400-react-tic-tac-toe/static/js/2.30e64126.chunk.js.LICENSE.txt"
+    "main.css": "/minami441/ws-0400-react-tic-tac-toe/static/css/main.073c9b0a.css",
+    "main.js": "/minami441/ws-0400-react-tic-tac-toe/static/js/main.1ad065d6.js",
+    "static/js/787.f8e61807.chunk.js": "/minami441/ws-0400-react-tic-tac-toe/static/js/787.f8e61807.chunk.js",
+    "static/media/logo.svg": "/minami441/ws-0400-react-tic-tac-toe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/minami441/ws-0400-react-tic-tac-toe/index.html",
+    "main.073c9b0a.css.map": "/minami441/ws-0400-react-tic-tac-toe/static/css/main.073c9b0a.css.map",
+    "main.1ad065d6.js.map": "/minami441/ws-0400-react-tic-tac-toe/static/js/main.1ad065d6.js.map",
+    "787.f8e61807.chunk.js.map": "/minami441/ws-0400-react-tic-tac-toe/static/js/787.f8e61807.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.56344721.js",
-    "static/js/2.30e64126.chunk.js",
-    "static/js/main.279011d9.chunk.js"
+    "static/css/main.073c9b0a.css",
+    "static/js/main.1ad065d6.js"
   ]
 }
