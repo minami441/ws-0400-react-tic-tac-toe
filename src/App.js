@@ -145,7 +145,7 @@ const App = () => {
           </Board>
 
           <Footer>
-            <Status value={state.squares}/>
+            <Status value = {state.squares}/>
             <Restart onClick = {() => restart()}>
               Restart
             </Restart>
