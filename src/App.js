@@ -123,8 +123,7 @@ const App = () => {
   function handleClick(i){
     const squares = state.squares.slice();
 
-    if (calculateWinner(squares) || squares[i]) {
-      console.log(state)
+    if (state.winner || squares[i]) {
       return;
     }
   
