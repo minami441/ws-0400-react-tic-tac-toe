@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
-import CalculateWinner from './CalculateWinner';
-import Status from './Status';
-import Maru from './Maru';
-import Batu from './Batu';
+import Status from './Components/Status';
+//import Myturn from './Components/Turn';
 
 
 const Container = styled.div`
@@ -80,39 +78,78 @@ const Cell = styled.div`
   border-right: 1px solid black;
 `; 
 
+
+const Turn = styled.div`
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: ${props => props.active ? '3px solid black': ''};
+`;
+
+function calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+
+  if(squares.includes(null) === false){
+    return 'draw';
+  }
+
+    return null;
+}
+
+
 const App = () => {
 
   const [state,setState] = React.useState({
     squares: Array(9).fill(null),
     xIsNext: true,
+    winner: null
   });
 
   function handleClick(i){
     const squares = state.squares.slice();
 
-    if (CalculateWinner(squares) || squares[i]) {
+    if (calculateWinner(squares) || squares[i]) {
+      console.log(state)
       return;
     }
+  
+    squares[i] = state.xIsNext ? '○' : '×';
 
-    squares[i] = state.xIsNext ? '×' : '○';
+    const winner = calculateWinner(squares)
 
     setState({
       squares: squares,
-      xIsNext: !state.xIsNext
-    })
-
-  }
-
-  function restart(){
-
-    setState({
-      squares: Array(9).fill(null),
-      xIsNext: true,
+      xIsNext: !state.xIsNext,
+      winner: winner
     })
 
   }
   
-
+  
+  function restart(){
+  
+    setState({
+      squares: Array(9).fill(null),
+      xIsNext: true,
+      winner: null
+    })
+  
+  }
 
   // Use Title and Wrapper like any other React component – except they're styled!
   return(
@@ -122,8 +159,8 @@ const App = () => {
           <Header>
             <Title> Tic Tac Toe</Title>
             <Flex>
-              <Maru value = {state.xIsNext}/>
-              <Batu value = {state.xIsNext}/>
+              <Turn active = {state.xIsNext}>○</Turn>
+              <Turn active = {!state.xIsNext}>×</Turn>
             </Flex>
           </Header>
 
@@ -136,7 +173,7 @@ const App = () => {
                     const index = (i*3) + j
                     const value = state.squares[index]
                     const onClick = () => handleClick(index)
-                    return <Cell value = {value} onClick = {onClick}>{value}</Cell>
+                    return <Cell onClick = {onClick}>{value}</Cell>
                   })
                 }
               </Row>
@@ -145,7 +182,7 @@ const App = () => {
           </Board>
 
           <Footer>
-            <Status value = {state.squares}/>
+            <Status value = {state.winner}/>
             <Restart onClick = {() => restart()}>
               Restart
             </Restart>
